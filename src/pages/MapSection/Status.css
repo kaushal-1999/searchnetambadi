@@ -1,0 +1,133 @@
+/* ========================= */
+/* NETWORK STATUS SECTION */
+/* ========================= */
+.network-status {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    background: radial-gradient(circle at center, #020617, #0f172a);
+}
+
+/* STATUS CARD */
+.status-card {
+    background: rgba(15, 23, 42, 0.9);
+    padding: 16px 24px;
+    border-radius: 20px;
+    color: white;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    backdrop-filter: blur(10px);
+    /* glass effect */
+    transition: 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 200px;
+    text-align: left;
+}
+
+/* Hover (premium feel) */
+.status-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+/* DOT INDICATOR */
+.dot {
+    height: 10px;
+    width: 10px;
+    background: gray;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+/* ACTIVE DOT (LIVE EFFECT) */
+.dot.active {
+    background: #22c55e;
+    box-shadow: 0 0 10px #22c55e;
+    animation: blink 1.5s infinite;
+}
+
+/* BLINK ANIMATION */
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+/* ========================= */
+/* TABLET (<=1024px) */
+/* ========================= */
+@media (max-width: 1024px) {
+    .status-card {
+        padding: 14px 20px;
+        min-width: 180px;
+    }
+}
+
+/* ========================= */
+/* MOBILE (<=768px) */
+/* ========================= */
+@media (max-width: 768px) {
+    .network-status {
+        gap: 15px;
+        padding: 30px 15px;
+        justify-content: center;
+    }
+
+    .status-card {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+    .dot {
+        height: 9px;
+        width: 9px;
+    }
+}
+
+/* ========================= */
+/* SMALL MOBILE (<=480px) */
+/* ========================= */
+@media (max-width: 480px) {
+    .status-card {
+        padding: 10px 15px;
+        gap: 8px;
+        font-size: 13px;
+        min-width: 160px;
+    }
+
+    .dot {
+        height: 8px;
+        width: 8px;
+    }
+}
+
+/* ========================= */
+/* LARGE SCREENS (>=1200px) */
+/* ========================= */
+@media (min-width: 1200px) {
+    .network-status {
+        gap: 25px;
+        padding: 50px 40px;
+    }
+
+    .status-card {
+        padding: 18px 26px;
+        min-width: 220px;
+        font-size: 15px;
+    }
+}

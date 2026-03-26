@@ -1,0 +1,244 @@
+/* ========================= */
+/* HERO SECTION BASE */
+/* ========================= */
+.hero {
+    min-height: 80vh;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* CONTAINER */
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 50px 60px;
+    width: 100%;
+    gap: 40px;
+}
+
+/* TEXT */
+.hero-text h1 {
+    font-size: 46px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.hero-text h1 span {
+    color: #38bdf8;
+}
+
+/* TAGLINE */
+.tagline {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #38bdf8;
+    font-weight: 500;
+}
+
+/* SUBTEXT */
+.subtext {
+    margin: 15px 0;
+    font-size: 16px;
+    color: #cbd5f5;
+    line-height: 1.6;
+}
+
+/* BUTTONS */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    border: none;
+    padding: 12px 28px;
+    color: #020617;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+}
+
+/* OUTLINE BUTTON */
+.btn-outline {
+    background: transparent;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    padding: 12px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: #38bdf8;
+    color: #020617;
+}
+
+/* STATS */
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.hero-stats h3 {
+    color: #38bdf8;
+    font-size: 22px;
+}
+
+.hero-stats p {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* IMAGE */
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.02);
+}
+
+/* ========================= */
+/* TABLET (<=1024px) */
+/* ========================= */
+@media (max-width: 1024px) {
+    .hero-container {
+        padding: 40px 30px;
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hero-image img {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+/* ========================= */
+/* MOBILE (<=768px) */
+/* ========================= */
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .tagline {
+        font-size: 16px;
+    }
+
+    .subtext {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-stats {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ========================= */
+/* SMALL MOBILE (<=480px) */
+/* ========================= */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .tagline {
+        font-size: 14px;
+    }
+
+    .subtext {
+        font-size: 13px;
+    }
+
+    .hero-buttons button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .hero-stats h3 {
+        font-size: 18px;
+    }
+
+    .hero-stats p {
+        font-size: 12px;
+    }
+}
+
+/* ========================= */
+/* LARGE SCREENS (>=1200px) */
+/* ========================= */
+@media (min-width: 1200px) {
+    .hero-container {
+        padding: 60px 80px;
+        gap: 50px;
+    }
+
+    .hero-text h1 {
+        font-size: 50px;
+    }
+
+    .hero-stats h3 {
+        font-size: 24px;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+}
