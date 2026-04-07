@@ -1,5 +1,6 @@
 import "./Hero.css";
 import heroImg from "../../assets/hero.png";
+
 function Hero() {
     return (
         <section className="hero">
@@ -16,13 +17,21 @@ function Hero() {
                     </p>
 
                     <p className="subtext">
-                        Enjoy ultra-fast streaming, lag-free gaming, and uninterrupted work 
+                        Enjoy ultra-fast streaming, lag-free gaming, and uninterrupted work
                         with high-performance broadband that keeps you always connected.
                     </p>
 
                     <div className="hero-buttons">
                         <button className="btn-primary">Get Started</button>
-                        <button className="btn-outline">Contact Us</button>
+
+                        <a
+                            className="btn-outline"
+                            href="https://wa.me/918550934568?text=Hello%20I%20am%20interested%20in%20your%20fiber%20internet"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Contact Us
+                        </a>
                     </div>
 
                     <div className="hero-stats">
@@ -42,7 +51,7 @@ function Hero() {
                 </div>
 
                 <div className="hero-image">
-                    <img 
+                    <img
                         src={heroImg}
                         alt="fiber internet"
                     />

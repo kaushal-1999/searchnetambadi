@@ -8,7 +8,9 @@
     align-items: center;
     overflow: hidden;
 }
-
+a{
+    text-decoration: none;
+}
 /* CONTAINER */
 .hero-container {
     display: grid;
